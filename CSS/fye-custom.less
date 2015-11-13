@@ -1,0 +1,197 @@
+@import "..\..\WSU-UE---CSS\wp-master-style-sheet.less";
+
+/*  ╔══════════════════════════════════════════════════════════════════════════════════════════════╗ 
+ *  ║ ############################# FYE-SPECIFIC CLASSES & OVERWRITES ############################ ║
+ *  ╚══════════════════════════════════════════════════════════════════════════════════════════════╝
+ */
+div.interactively-flipped-panels {
+	div.container {
+		background: @hex-white url(/wp-content/uploads/sites/906/2015/08/tileable-paper-texture_600x600_opacity-1.0.jpg) left top repeat;
+	}
+}
+
+body {
+	background: url(/wp-content/uploads/sites/906/2015/08/Cougar-Head-Grid_Half-Size_Crimson-03.png) left top fixed repeat,  #000 url(/wp-content/uploads/sites/906/2015/08/tileable-eroded-scratch-metal-texture_black_Quarter-size.jpg) left top fixed repeat;
+	font-family: 'Open Sans', 'Lucida Sans Unicode', 'Lucida Sans', 'Lucida Grande';
+}
+
+main {
+	background: #fff url(/wp-content/uploads/sites/906/2015/08/tileable-paper-texture_600x600_opacity-1.0.jpg) left top repeat;
+}
+
+#binder {
+	border-right: 1px solid rgba(239,240,241,0.5);
+	box-shadow: 5px 0 5px rgba(0,0,0,0.5);
+}
+
+#jacket {
+	background-repeat: no-repeat;
+	background-position: right bottom;
+	background-attachment: fixed;
+}
+
+/*#spine.crimson #glue:before {
+	background: #981e32 url(/wp-content/uploads/sites/906/2015/08/seamless-marble-texture_crimson-03.png) left top repeat scroll;
+}*/
+
+header.main-header {
+	background: url(/wp-content/uploads/sites/906/2015/08/bg-cougar-eyes.png) left top repeat, rgb(94, 106, 113);
+	color: #fff !important;
+	font-family: 'Open Sans', 'Lucida Sans Unicode', 'Lucida Sans', 'Lucida Grande';
+	
+	@media print {
+		background: url(/wp-content/uploads/sites/906/2015/08/bg-cougar-eyes.png) left top repeat, rgb(94, 106, 113);
+	}
+	
+	@media all and (max-width: 1208px) {
+		/*background: url(/wp-content/uploads/sites/50/2015/06/Distinguished-Scholarships-Logo-sm-WP_50px-height-2.png) no-repeat right top, url(/wp-content/uploads/sites/50/2015/04/seamless-marble-texture_528x528.png) left top repeat, rgba(42,48,51,1.00);*/
+	}
+}
+
+.main-header sub:not(.unset), .main-header sup:not(.unset) {
+	color: #fff !important;
+}
+
+/*nav.spine-sitenav ul li {
+	a[href="#disabled"] {
+		pointer-events: none;
+	}
+	
+	h4 {
+		color: #d7b258;
+		font-size: .85rem;
+		margin-top: .85rem;
+		padding-top: 0;
+		padding-bottom: 0;
+		text-transform: uppercase;
+	}
+	&:nth-child(1) h4 {
+		margin-top: 0;
+		padding-top: 0;
+	}
+}*/
+
+div.column {
+	aside.article-sidebar {
+		background: #f8f1eb url(/wp-content/uploads/sites/906/2015/08/tileable-concrete-texture_128x128.png) left top repeat;
+		border: 1px solid #6d441f;
+		box-shadow: 1px 1px 2px rgba(109,68,31,0.5);
+		color: #464e54;
+		float: right;
+		font-size: .8rem;
+		margin-left: 1rem;
+		margin-bottom: 1rem;
+		padding: .8rem;
+		width: 33%;
+		p {
+			font-size: inherit;
+		}
+	}
+}
+
+div.column {
+	table.peopleList {
+        background: none;
+        border: none;
+        border-collapse: separate;
+        border-spacing: 20px;
+        width: 100%;
+         min-width: 480px;
+         max-width: 720px;
+        margin: 0 auto;
+        tbody td {
+            position: relative;
+            padding: 20px;
+            height: 120px;
+            &:first-of-type {
+                width: 100%;
+                text-align: left;
+            }
+            p {
+                line-height: 1.35em;
+                padding-bottom: 0;
+                &.staff-portrait {
+                    float: left;
+                    height: 120px;
+                    width: 90px;
+                    padding: 0;
+                    margin: 0;
+                    img {
+                        width: 100%;
+                    }
+                }
+                &.staff-name, &.staff-title, &.staff-unit, &.staff-contact {
+                    float: right;
+                    width: ~"calc(100% - 90px - 20px)";
+                    margin: 0;
+                }
+                &.staff-name {
+                    font-size: 2em;
+                    font-weight: bold;
+                }
+                &.staff-title {
+                    padding-top: 0.1em;
+                }
+                &.staff-title, &.staff-unit, &.staff-contact {
+                    font-size: 1.3em;
+                }
+            }
+        }
+        tbody tr:nth-child(4n+1) td {
+            .rgb-accent-green(); background-color: rgba(@rval, @gval, @bval, 0.10);
+            .rgb-dark-green(); border: 1px solid rgba(@rval, @gval, @bval, 0.5);
+            box-shadow: 1px 1px 2px rgba(@rval, @gval, @bval, 0.25);
+            p.staff-portrait img {
+                .rgb-dark-green(); border: 1px solid rgba(@rval, @gval, @bval, 0.4);
+            }
+            p.staff-name {
+                color: @hex-darkest-green;
+            }
+        }
+        tbody tr:nth-child(4n+2) td {
+            .rgb-accent-orange(); background-color: rgba(@rval, @gval, @bval, 0.10);
+            .rgb-dark-orange(); border: 1px solid rgba(@rval, @gval, @bval, 0.5);
+            box-shadow: 1px 1px 2px rgba(@rval, @gval, @bval, 0.25);
+            p.staff-portrait img {
+                .rgb-dark-orange(); border: 1px solid rgba(@rval, @gval, @bval, 0.4);
+            }
+            p.staff-name {
+                color: @hex-darkest-orange;
+            }
+        }
+        tbody tr:nth-child(4n+3) td {
+            .rgb-accent-yellow(); background-color: rgba(@rval, @gval, @bval, 0.10);
+            .rgb-dark-yellow(); border: 1px solid rgba(@rval, @gval, @bval, 0.5);
+            box-shadow: 1px 1px 2px rgba(@rval, @gval, @bval, 0.25);
+            p.staff-portrait img {
+                .rgb-dark-yellow(); border: 1px solid rgba(@rval, @gval, @bval, 0.4);
+            }
+            p.staff-name {
+                color: @hex-darkest-yellow;
+            }
+        }
+        tbody tr:nth-child(4n+4) td {
+            .rgb-accent-blue(); background-color: rgba(@rval, @gval, @bval, 0.10);
+            .rgb-dark-blue(); border: 1px solid rgba(@rval, @gval, @bval, 0.5);
+            box-shadow: 1px 1px 2px rgba(@rval, @gval, @bval, 0.25);
+            p.staff-portrait img {
+                .rgb-dark-blue(); border: 1px solid rgba(@rval, @gval, @bval, 0.4);
+            }
+            p.staff-name {
+                color: @hex-darkest-blue;
+            }
+        }
+    }
+}
+
+section.hides-overflow {
+    overflow: hidden;
+}
+
+div.column div.filler {
+    background: @hex-gray url(/wp-content/uploads/sites/906/2015/11/Our-Team_Sidebar-Background.png) no-repeat center top;
+    width: 100%;
+    height: 0;
+    padding-bottom: 1000em;
+    margin-bottom: -1000em;
+}
