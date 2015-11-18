@@ -138,7 +138,7 @@ div.column {
             }
         }
         tbody tr:nth-child(4n+1) td {
-            .rgb-accent-green(); background-color: rgba(@rval, @gval, @bval, 0.10);
+            .rgb-green(); background-color: rgba(@rval, @gval, @bval, 0.10);
             .rgb-dark-green(); border: 1px solid rgba(@rval, @gval, @bval, 0.5);
             box-shadow: 1px 1px 2px rgba(@rval, @gval, @bval, 0.25);
             p.staff-portrait img {
@@ -149,7 +149,7 @@ div.column {
             }
         }
         tbody tr:nth-child(4n+2) td {
-            .rgb-accent-orange(); background-color: rgba(@rval, @gval, @bval, 0.10);
+            .rgb-orange(); background-color: rgba(@rval, @gval, @bval, 0.10);
             .rgb-dark-orange(); border: 1px solid rgba(@rval, @gval, @bval, 0.5);
             box-shadow: 1px 1px 2px rgba(@rval, @gval, @bval, 0.25);
             p.staff-portrait img {
@@ -160,7 +160,7 @@ div.column {
             }
         }
         tbody tr:nth-child(4n+3) td {
-            .rgb-accent-yellow(); background-color: rgba(@rval, @gval, @bval, 0.10);
+            .rgb-yellow(); background-color: rgba(@rval, @gval, @bval, 0.10);
             .rgb-dark-yellow(); border: 1px solid rgba(@rval, @gval, @bval, 0.5);
             box-shadow: 1px 1px 2px rgba(@rval, @gval, @bval, 0.25);
             p.staff-portrait img {
@@ -171,7 +171,7 @@ div.column {
             }
         }
         tbody tr:nth-child(4n+4) td {
-            .rgb-accent-blue(); background-color: rgba(@rval, @gval, @bval, 0.10);
+            .rgb-blue(); background-color: rgba(@rval, @gval, @bval, 0.10);
             .rgb-dark-blue(); border: 1px solid rgba(@rval, @gval, @bval, 0.5);
             box-shadow: 1px 1px 2px rgba(@rval, @gval, @bval, 0.25);
             p.staff-portrait img {
@@ -194,4 +194,18 @@ div.column div.filler {
     height: 0;
     padding-bottom: 1000em;
     margin-bottom: -1000em;
+}
+
+section {
+    &.side-right.large-format-friendly, &.row.side-right.large-format-friendly {
+        @media all {
+            @media (min-width: 875px) {
+                div.column.two.our-team::before {
+                    top: 2rem;
+                    right: 2rem;
+                    background: @hex-dark-gray url(/wp-content/uploads/sites/906/2015/11/Our-Team_Sidebar-Background.png) no-repeat center top;
+                }
+            }
+        }
+    }
 }
