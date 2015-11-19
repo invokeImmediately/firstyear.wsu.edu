@@ -89,6 +89,24 @@ div.column {
 	}
 }
 
+/*  ╔══════════════════════════════════════════════════════════════════════════════════════════════╗ 
+ *  ║ #### SECTION HEADERS ####################################################################### ║
+ *  ╠==============================================================================================╣
+ *  ║ Style definitions of unique banner headers that serve to visually distinguish each grouping  ║
+ *  ║ of pages on the SURCA website.                                                               ║
+ *  ╚══════════════════════════════════════════════════════════════════════════════════════════════╝
+ */
+div.column {
+	font-family: 'Open Sans', 'Lucida Sans Unicode', 'Lucida Sans', 'Lucida Grande';
+	section {
+        &.header-courses {
+            background: url(/wp-content/uploads/sites/906/2015/11/section-bar.png) no-repeat left top,
+                url(/wp-content/uploads/sites/906/2015/11/section-bar.png) no-repeat right top,
+                url(/wp-content/uploads/sites/906/2015/11/wpbg-courses.png) no-repeat center;
+        }
+    }
+}
+
 div.column {
 	table.peopleList {
         background: none;
@@ -232,14 +250,20 @@ div.column div.filler {
 section {
     &.side-right.large-format-friendly, &.row.side-right.large-format-friendly {
         @media all {
-            @media (min-width: 875px) {
+            @media (min-width: 1050px) {
                 div.column.two:not(.graphical)::before {
                     background: @hex-lighter-gray;
                 }
                 div.column.two.our-team::before {
                     top: 2rem;
                     right: 2rem;
-                    background: @hex-dark-gray url(/wp-content/uploads/sites/906/2015/11/Our-Team_Sidebar-Background.png) no-repeat center top;
+                    background: @hex-dark-gray url(/wp-content/uploads/sites/906/2015/11/right-sidebar_our-team.png) no-repeat center top;
+                    background-size: 290px auto;
+                }
+                div.column.two.univ-104::before {
+                    right: 2rem;
+                    background: @hex-crimson url(/wp-content/uploads/sites/906/2015/11/right-sidebar_univ-104.png) no-repeat center top;
+                    background-size: 290px auto;
                 }
             }
         }
