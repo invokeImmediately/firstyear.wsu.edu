@@ -250,21 +250,81 @@ div.column div.filler {
 section {
     &.side-right.large-format-friendly, &.row.side-right.large-format-friendly {
         @media all {
-            @media (min-width: 1050px) {
-                div.column.two:not(.graphical)::before {
+            @media (min-width: (@v-tblt-thrshld + 1)) {
+                div.column.two:before {
                     background: @hex-lighter-gray;
                 }
-                div.column.two.our-team::before {
+                div.column.two.our-team:before {
                     top: 2rem;
                     right: 2rem;
                     background: @hex-dark-gray url(/wp-content/uploads/sites/906/2015/11/right-sidebar_our-team.png) no-repeat center top;
                     background-size: 290px auto;
+                /*.rgb-lighter-gray(); background: -webkit-linear-gradient(left,
+                 rgba(@rval, @gval, @bval, 0.0) 0px, rgba(@rval, @gval, @bval, 0.0) 676px,
+                 rgba(@rval, @gval, @bval, 1.0) 676px);
+                background: -moz-linear-gradient(left,
+                 rgba(@rval, @gval, @bval, 0.0) 0px, rgba(@rval, @gval, @bval, 0.0) 676px,
+                 rgba(@rval, @gval, @bval, 1.0) 676px);
+                background: -ms-linear-gradient(left,
+                 rgba(@rval, @gval, @bval, 0.0) 0px, rgba(@rval, @gval, @bval, 0.0) 676px,
+                 rgba(@rval, @gval, @bval, 1.0) 676px);
+                background: -o-linear-gradient(left,
+                 rgba(@rval, @gval, @bval, 0.0) 0px, rgba(@rval, @gval, @bval, 0.0) 676px,
+                 rgba(@rval, @gval, @bval, 1.0) 676px);
+                background: linear-gradient(to right,
+                 rgba(@rval, @gval, @bval, 0.0) 0px, rgba(@rval, @gval, @bval, 0.0) 676px,
+                 rgba(@rval, @gval, @bval, 1.0) 676px);
+                &.our-team {
+                    .rgb-dark-gray(); background: -webkit-linear-gradient(left,
+                     rgba(@rval, @gval, @bval, 0.0) 0px, rgba(@rval, @gval, @bval, 0.0) 692px,
+                     rgba(@rval, @gval, @bval, 1.0) 692px);
+                    background: -moz-linear-gradient(left,
+                     rgba(@rval, @gval, @bval, 0.0) 0px, rgba(@rval, @gval, @bval, 0.0) 692px,
+                     rgba(@rval, @gval, @bval, 1.0) 692px);
+                    background: -ms-linear-gradient(left,
+                     rgba(@rval, @gval, @bval, 0.0) 0px, rgba(@rval, @gval, @bval, 0.0) 692px,
+                     rgba(@rval, @gval, @bval, 1.0) 692px);
+                    background: -o-linear-gradient(left,
+                     rgba(@rval, @gval, @bval, 0.0) 0px, rgba(@rval, @gval, @bval, 0.0) 692px,
+                     rgba(@rval, @gval, @bval, 1.0) 692px);
+                    background: linear-gradient(to right,
+                     rgba(@rval, @gval, @bval, 0.0) 0px, rgba(@rval, @gval, @bval, 0.0) 692px,
+                     rgba(@rval, @gval, @bval, 1.0) 692px);
+                    div.column.two {
+                        height: 1724px;
+                        padding: 0;
+                        background: @hex-dark-gray url(/wp-content/uploads/sites/906/2015/11/right-sidebar_our-team.png) no-repeat center top;
+                        background-size: 290px auto;
+                    } */
                 }
-                div.column.two.univ-104::before {
+                div.column.two.univ-104:before {
                     right: 2rem;
                     background: @hex-crimson url(/wp-content/uploads/sites/906/2015/11/right-sidebar_univ-104.png) no-repeat center top;
                     background-size: 290px auto;
-                }
+                    /* &.univ-104 {
+                    position: relative;
+                    .rgb-crimson(); background: -webkit-linear-gradient(left,
+                     rgba(@rval, @gval, @bval, 0.0) 0px, rgba(@rval, @gval, @bval, 0.0) 692px,
+                     rgba(@rval, @gval, @bval, 1.0) 692px);
+                    background: -moz-linear-gradient(left,
+                     rgba(@rval, @gval, @bval, 0.0) 0px, rgba(@rval, @gval, @bval, 0.0) 692px,
+                     rgba(@rval, @gval, @bval, 1.0) 692px);
+                    background: -ms-linear-gradient(left,
+                     rgba(@rval, @gval, @bval, 0.0) 0px, rgba(@rval, @gval, @bval, 0.0) 692px,
+                     rgba(@rval, @gval, @bval, 1.0) 692px);
+                    background: -o-linear-gradient(left,
+                     rgba(@rval, @gval, @bval, 0.0) 0px, rgba(@rval, @gval, @bval, 0.0) 692px,
+                     rgba(@rval, @gval, @bval, 1.0) 692px);
+                    background: linear-gradient(to right,
+                     rgba(@rval, @gval, @bval, 0.0) 0px, rgba(@rval, @gval, @bval, 0.0) 692px,
+                     rgba(@rval, @gval, @bval, 1.0) 692px);
+                    div.column.two {
+                        height: 677px;
+                        padding: 0;
+                        background: @hex-crimson url(/wp-content/uploads/sites/906/2015/11/right-sidebar_univ-104.png) no-repeat center top;
+                        background-size: 290px auto;
+                    } */
+                } 
             }
         }
     }
