@@ -1949,7 +1949,6 @@ div.interactively-flipped-panels div.container div.panel-wrapper.bottom-right:ho
   div.interactively-flipped-panels div.container div.panel-wrapper.bottom-right:hover {
     position: relative;
     width: 100%;
-    padding-bottom: calc(100% * 0.8 * 4);
     padding-bottom: calc(100% * 0.8);
   }
 }
