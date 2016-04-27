@@ -1921,6 +1921,12 @@ div.interactively-flipped-panels div.container div.panel-wrapper:hover div.panel
   transition-timing-function: linear;
   -webkit-transition-timing-function: linear;
 }
+@media all and (max-width: 480px) {
+  div.interactively-flipped-panels div.container div.panel-wrapper:hover div.panel div.front {
+    transition-delay: 0s;
+    -webkit-transition-delay: 0s;
+  }
+}
 div.interactively-flipped-panels div.container div.panel-wrapper:hover div.panel div.rear {
   opacity: 1;
   transition-property: opacity;
@@ -1931,6 +1937,12 @@ div.interactively-flipped-panels div.container div.panel-wrapper:hover div.panel
   -webkit-transition-duration: 0s;
   transition-timing-function: linear;
   -webkit-transition-timing-function: linear;
+}
+@media all and (max-width: 480px) {
+  div.interactively-flipped-panels div.container div.panel-wrapper:hover div.panel div.rear {
+    transition-delay: 0s;
+    -webkit-transition-delay: 0s;
+  }
 }
 div.interactively-flipped-panels div.container div.panel-wrapper.top-left:hover,
 div.interactively-flipped-panels div.container div.panel-wrapper.top-right:hover,
