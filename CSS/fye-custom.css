@@ -1950,6 +1950,8 @@ div.interactively-flipped-panels div.container div.panel-wrapper:hover div.panel
   div.interactively-flipped-panels div.container div.panel-wrapper:hover div.panel div.rear {
     transition-property: opacity;
     -webkit-transition-property: opacity;
+    transition-delay: 0.5s;
+    -webkit-transition-delay: 0.5s;
     transition-duration: 0s;
     -webkit-transition-duration: 0s;
     transition-timing-function: linear;
@@ -1958,8 +1960,12 @@ div.interactively-flipped-panels div.container div.panel-wrapper:hover div.panel
 }
 @media all and (max-width: 480px) {
   div.interactively-flipped-panels div.container div.panel-wrapper:hover div.panel div.rear {
-    transition-delay: 0s;
-    -webkit-transition-delay: 0s;
+    transition-property: opacity;
+    -webkit-transition-property: opacity;
+    transition-duration: 0s;
+    -webkit-transition-duration: 0s;
+    transition-timing-function: linear;
+    -webkit-transition-timing-function: linear;
   }
 }
 div.interactively-flipped-panels div.container div.panel-wrapper.top-left:hover,
