@@ -960,6 +960,11 @@ div.column p:last-child:not(.no-bottom-pad) {
 div.column p:not(:last-child):not(.no-btm-margin) {
   margin-bottom: 1em;
 }
+div.column p.btm-margin-override:not(:last-child),
+div.column div.interactively-flipped-panels > div.container > div.panel-wrapper > div.panel > div.rear > p.success-key:not(:last-child),
+div.column div.interactively-flipped-panels > div.container > div.panel-wrapper > div.panel > div.rear > p.alternate-title:not(:last-child) {
+  margin-bottom: 0;
+}
 div.column p.double-margins:not(:last-child) {
   margin-bottom: 2em;
 }
@@ -1780,7 +1785,7 @@ div.interactively-flipped-panels div.container div.panel-wrapper div.panel div.f
   width: 100%;
   height: 100%;
   z-index: 10;
-  opacity: 1.0;
+  opacity: 1;
   text-transform: uppercase;
 }
 div.interactively-flipped-panels div.container div.panel-wrapper div.panel div.front p {
@@ -1900,33 +1905,22 @@ div.interactively-flipped-panels div.container div.panel-wrapper:hover {
 }
 @media all and (max-width: 480px) {
   div.interactively-flipped-panels div.container div.panel-wrapper:hover {
-    width: 96.9762%;
     width: 100%;
-    padding-bottom: 313.3477%;
-    padding-bottom: calc(100% * 0.8 * 4);
+    padding-bottom: 76.9762%;
+    padding-bottom: calc(100% * 0.8);
   }
 }
 div.interactively-flipped-panels div.container div.panel-wrapper:hover div.panel div.front {
   opacity: 0;
-  transition-property: opacity;
-  -webkit-transition-property: opacity;
-  transition-delay: 0.5s;
-  -webkit-transition-delay: 0.5s;
-  transition-duration: .25s;
-  -webkit-transition-duration: .25s;
-  transition-timing-function: linear;
-  -webkit-transition-timing-function: linear;
+  -webkit-transition: opacity 0.25s linear 0.5s;
+  -moz-transition: opacity 0.25s linear 0.5s;
+  transition: opacity 0.25s linear 0.5s;
 }
 div.interactively-flipped-panels div.container div.panel-wrapper:hover div.panel div.rear {
   opacity: 1;
-  transition-property: opacity;
-  -webkit-transition-property: opacity;
-  transition-delay: 0.5s;
-  -webkit-transition-delay: 0.5s;
-  transition-duration: 0s;
-  -webkit-transition-duration: 0s;
-  transition-timing-function: linear;
-  -webkit-transition-timing-function: linear;
+  -webkit-transition: opacity 0 linear 0.5s;
+  -moz-transition: opacity 0 linear 0.5s;
+  transition: opacity 0 linear 0.5s;
 }
 div.interactively-flipped-panels div.container div.panel-wrapper.top-left:hover,
 div.interactively-flipped-panels div.container div.panel-wrapper.top-right:hover,
@@ -1934,12 +1928,9 @@ div.interactively-flipped-panels div.container div.panel-wrapper.bottom-left:hov
 div.interactively-flipped-panels div.container div.panel-wrapper.bottom-right:hover {
   width: calc(100% - 2em);
   padding-bottom: calc((50% * 0.8 - 2em) * 2 + 2em);
-  transition-property: width, padding;
-  -webkit-transition-property: width, padding;
-  transition-duration: 0.25s, 0.25s;
-  -webkit-transition-duration: 0.25s, 0.25s;
-  transition-timing-function: linear, linear;
-  -webkit-transition-timing-function: linear, linear;
+  -webkit-transition: width 0.25s linear 0.25s, padding 0.25s linear 0.25s;
+  -moz-transition: width 0.25s linear 0.25s, padding 0.25s linear 0.25s;
+  transition: width 0.25s linear 0.25s, padding 0.25s linear 0.25s;
 }
 @media all and (max-width: 480px) {
   div.interactively-flipped-panels div.container div.panel-wrapper.top-left:hover,
@@ -1948,18 +1939,13 @@ div.interactively-flipped-panels div.container div.panel-wrapper.bottom-right:ho
   div.interactively-flipped-panels div.container div.panel-wrapper.bottom-right:hover {
     position: relative;
     width: 100%;
-    padding-bottom: calc(100% * 0.8 * 4);
+    padding-bottom: calc(100% * 0.8);
   }
 }
 @media all and (max-width: 480px) {
   div.interactively-flipped-panels div.container:hover {
-    padding-bottom: calc((100% * 0.8) * 3 + (100% * 0.8) * 4);
-    transition-property: padding;
-    -webkit-transition-property: padding;
-    transition-duration: 0.25s;
-    -webkit-transition-duration: 0.25s;
-    transition-timing-function: linear;
-    -webkit-transition-timing-function: linear;
+    padding-bottom: 320%;
+    padding-bottom: calc((100% * 0.8) * 4);
   }
 }
 /*  ┌──────────────────────────────────────────────────────────────────────────────────────────────┐
@@ -2403,10 +2389,10 @@ span.accentuated-text {
   font-weight: 700;
   font-size: 1.3em;
   line-height: normal;
-  color: #3f6b72;
+  color: #0099b1;
 }
 span.accentuated-text.brighter {
-  color: #4f868e;
+  color: #00c1dd;
 }
 span.accentuated-text.gray {
   color: #5e6a71;
@@ -3830,24 +3816,6 @@ header.main-header {
 .main-header sup:not(.unset) {
   color: #fff !important;
 }
-/*nav.spine-sitenav ul li {
-	a[href="#disabled"] {
-		pointer-events: none;
-	}
-	
-	h4 {
-		color: #d7b258;
-		font-size: .85rem;
-		margin-top: .85rem;
-		padding-top: 0;
-		padding-bottom: 0;
-		text-transform: uppercase;
-	}
-	&:nth-child(1) h4 {
-		margin-top: 0;
-		padding-top: 0;
-	}
-}*/
 div.column aside.article-sidebar {
   background: #f8f1eb url(/wp-content/uploads/sites/906/2015/08/tileable-concrete-texture_128x128.png) left top repeat;
   border: 1px solid #6d441f;
@@ -4090,4 +4058,51 @@ div.column div.filler {
                         background-size: 290px auto;
                     } */
   }
+}
+div.interactively-flipped-panels {
+  background: #5e6a71 url(/wp-content/uploads/sites/906/2016/04/texture_brushed-metal.jpg) repeat scroll left top;
+}
+div.interactively-flipped-panels > div.container > div.panel-wrapper > div.panel > div.rear > p.success-key {
+  font-size: 0.9em;
+  text-transform: uppercase;
+}
+div.interactively-flipped-panels > div.container > div.panel-wrapper > div.panel > div.rear > p.alternate-title,
+div.interactively-flipped-panels > div.container > div.panel-wrapper > div.panel > div.rear > p.topic-tagline {
+  margin-top: 0.25em;
+}
+div.interactively-flipped-panels > div.container > div.panel-wrapper.top-left div.panel div.front {
+  background: url(/wp-content/uploads/sites/906/2016/04/Graphic_Embracing-Academic-Life-Front.jpg) no-repeat center center;
+  background-size: 100% auto;
+}
+div.interactively-flipped-panels > div.container > div.panel-wrapper.top-left div.panel div.rear {
+  background: #981e32 url(/wp-content/uploads/sites/906/2016/04/Graphic_Embracing-Academic-Life-Back.jpg) no-repeat center center;
+  background-size: 100% auto;
+  color: #ffffff;
+}
+div.interactively-flipped-panels > div.container > div.panel-wrapper.top-right div.panel div.front {
+  background: url(/wp-content/uploads/sites/906/2016/04/Graphic_Building-Community-Front.jpg) no-repeat center center;
+  background-size: 100% auto;
+}
+div.interactively-flipped-panels > div.container > div.panel-wrapper.top-right div.panel div.rear {
+  background: #981e32 url(/wp-content/uploads/sites/906/2016/04/Graphic_Building-Community-Rear.jpg) no-repeat center center;
+  background-size: 100% auto;
+  color: #ffffff;
+}
+div.interactively-flipped-panels > div.container > div.panel-wrapper.bottom-left div.panel div.front {
+  background: url(/wp-content/uploads/sites/906/2016/04/Graphic_Maintaining-Wellbeing-Front.jpg) no-repeat center center;
+  background-size: 100% auto;
+}
+div.interactively-flipped-panels > div.container > div.panel-wrapper.bottom-left div.panel div.rear {
+  background: #981e32 url(/wp-content/uploads/sites/906/2016/04/Graphic_Maintaining-Wellbeing-Rear.jpg) no-repeat center center;
+  background-size: 100% auto;
+  color: #ffffff;
+}
+div.interactively-flipped-panels > div.container > div.panel-wrapper.bottom-right div.panel div.front {
+  background: url(/wp-content/uploads/sites/906/2016/04/Graphic_Finding-Direction-Front.jpg) no-repeat center center;
+  background-size: 100% auto;
+}
+div.interactively-flipped-panels > div.container > div.panel-wrapper.bottom-right div.panel div.rear {
+  background: #981e32 url(/wp-content/uploads/sites/906/2016/04/Graphic_Finding-Direction-Rear.jpg) no-repeat center center;
+  background-size: 100% auto;
+  color: #ffffff;
 }
