@@ -52,25 +52,6 @@ header.main-header {
 	color: #fff !important;
 }
 
-/*nav.spine-sitenav ul li {
-	a[href="#disabled"] {
-		pointer-events: none;
-	}
-	
-	h4 {
-		color: #d7b258;
-		font-size: .85rem;
-		margin-top: .85rem;
-		padding-top: 0;
-		padding-bottom: 0;
-		text-transform: uppercase;
-	}
-	&:nth-child(1) h4 {
-		margin-top: 0;
-		padding-top: 0;
-	}
-}*/
-
 div.column {
 	aside.article-sidebar {
 		background: #f8f1eb url(/wp-content/uploads/sites/906/2015/08/tileable-concrete-texture_128x128.png) left top repeat;
@@ -327,5 +308,75 @@ section {
                 } 
             }
         }
+    }
+}
+
+div.interactively-flipped-panels {
+    background: @hex-dark-gray url(/wp-content/uploads/sites/906/2016/04/texture_brushed-metal.jpg) repeat scroll left top ;
+    & > div.container > div.panel-wrapper {
+        & > div.panel > div.rear {
+            & > p.success-key, & > p.alternate-title {
+                &:extend(p.btm-margin-override all);
+            }
+            & > p.success-key {
+                .has-smllr-txt();
+                .has-upprcs-txt();
+            }
+            & > p.alternate-title, & > p.topic-tagline {
+                margin-top: 0.25em;
+            }
+        }
+        &.top-left {
+            div.panel {
+                div.front {
+                    background: @hex-accent-green url(/wp-content/uploads/sites/906/2016/04/Graphic_Embracing-Academic-Life-Front.jpg) no-repeat center center;
+                    background-size: 100% auto;
+                }	
+                div.rear {
+                    background: @hex-darker-green url(/wp-content/uploads/sites/906/2016/04/Graphic_Embracing-Academic-Life-Back.jpg) no-repeat center center;
+                    background-size: 100% auto;
+                    color: @hex-white;
+                }
+            }
+        }
+        &.top-right{
+            div.panel {
+                div.front {
+                    background: @hex-accent-orange url(/wp-content/uploads/sites/906/2016/04/Graphic_Building-Community-Front.jpg) no-repeat center center;
+                    background-size: 100% auto;
+                }	
+                div.rear {
+                    background: @hex-darker-orange url(/wp-content/uploads/sites/906/2016/04/Graphic_Building-Community-Rear.jpg) no-repeat center center;
+                    background-size: 100% auto;
+                    color: @hex-white;
+                }
+            }
+        }
+        &.bottom-left{
+            div.panel {
+                div.front {
+                    background: @hex-accent-yellow url(/wp-content/uploads/sites/906/2016/04/Graphic_Maintaining-Wellbeing-Front.jpg) no-repeat center center;
+                    background-size: 100% auto;
+                }	
+                div.rear {
+                    background: @hex-darker-yellow url(/wp-content/uploads/sites/906/2016/04/Graphic_Maintaining-Wellbeing-Rear.jpg) no-repeat center center;
+                    background-size: 100% auto;
+                    color: @hex-white;
+                }
+            }
+        }
+        &.bottom-right{
+            div.panel {
+                div.front {
+                    background: @hex-accent-blue url(/wp-content/uploads/sites/906/2016/04/Graphic_Finding-Direction-Front.jpg) no-repeat center center;
+                    background-size: 100% auto;
+                }	
+                div.rear {
+                    background: @hex-darker-blue url(/wp-content/uploads/sites/906/2016/04/Graphic_Finding-Direction-Rear.jpg) no-repeat center center;
+                    background-size: 100% auto;
+                    color: @hex-white;
+                }
+            }
+        }    
     }
 }
