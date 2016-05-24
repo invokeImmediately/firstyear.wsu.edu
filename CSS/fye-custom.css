@@ -3894,6 +3894,26 @@ div.auto-scroller ul li {
 div.interactively-flipped-panels div.container {
   background: #fff url(/wp-content/uploads/sites/906/2015/08/tileable-paper-texture_600x600_opacity-1.0.jpg) left top repeat;
 }
+@media all and (max-width: 1440px) {
+  body {
+    background: #981e32;
+  }
+}
+@media all and (min-width: 1441px) and (max-width: 1920px) {
+  body {
+    background: #981e32 url(/wp-content/uploads/sites/906/2016/05/tileable-eroded-scratch-metal-texture_wuxga.jpg) repeat-y fixed right top;
+  }
+}
+@media all and (min-width: 1921px) and (max-width: 2560px) {
+  body {
+    background: #981e32 url(/wp-content/uploads/sites/906/2016/05/tileable-eroded-scratch-metal-texture_wqxga.jpg) repeat-y fixed right top;
+  }
+}
+@media all and (min-width: 2561px) {
+  body {
+    background: #981e32 url(/wp-content/uploads/sites/906/2016/05/tileable-eroded-scratch-metal-texture_wqxga.jpg) repeat-y fixed 1080px top;
+  }
+}
 body {
   background: url(/wp-content/uploads/sites/906/2015/08/Cougar-Head-Grid_Half-Size_Crimson-03.png) left top fixed repeat, #000 url(/wp-content/uploads/sites/906/2015/08/tileable-eroded-scratch-metal-texture_black_Quarter-size.jpg) left top fixed repeat;
   font-family: 'Open Sans', 'Lucida Sans Unicode', 'Lucida Sans', 'Lucida Grande';
