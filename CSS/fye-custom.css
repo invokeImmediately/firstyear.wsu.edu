@@ -514,6 +514,9 @@ section.halves div.column p {
     text-align: left;
   }
 }
+div.column section:not(:last-child) > *:last-child:not(.vpue-jump-bar) {
+  padding-bottom: 0;
+}
 /*     ┌─────────────────────────────────────────────────────────────────────────────────────────────────┐
  *     │ ++++ ASIDE selectors ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
  *     └─────────────────────────────────────────────────────────────────────────────────────────────────┘
@@ -1175,9 +1178,6 @@ div.column p.banner-text-orange-with-towers {
   div.column p.banner-text-orange-with-towers {
     font-size: 1.15244306rem;
   }
-}
-div.column section:not(:last-child) p:last-child:not(.vpue-jump-bar) {
-  padding-bottom: 0;
 }
 /*  └──────────────────────────────────────────────────────────────────────────────────────────────┘
  */
