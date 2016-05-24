@@ -993,9 +993,6 @@ div.column p.align-left {
     text-align: left;
   }
 }
-div.column p:last-child:not(.no-bottom-pad) {
-  padding-bottom: 1em;
-}
 div.column p:not(:last-child):not(.no-btm-margin) {
   margin-bottom: 1em;
 }
@@ -1337,6 +1334,9 @@ div.column {
 }
 div.column:nth-child(1) {
   margin-top: 0;
+}
+div.column > *:last-child:not(.no-bottom-pad) {
+  padding-bottom: 1em;
 }
 div.column.hides-overflow {
   overflow: hidden;
