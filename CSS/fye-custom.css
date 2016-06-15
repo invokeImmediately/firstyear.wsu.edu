@@ -4088,7 +4088,7 @@ div.column table.peopleList tbody td p.staff-bio:not(:last-child):not(.no-btm-sp
 }
 div.column table.peopleList tbody td p.staff-bio.more {
   clear: both;
-  font-size: 2em;
+  font-size: 0.75em;
   line-height: 0.25em;
   text-align: center;
 }
