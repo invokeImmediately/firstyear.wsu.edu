@@ -4091,6 +4091,7 @@ div.column table.peopleList tbody td p.staff-bio.more {
   font-size: 0.75em;
   line-height: 0.25em;
   text-align: center;
+  text-transform: uppercase;
 }
 div.column table.peopleList tbody tr:nth-child(4n+1) td {
   background-color: rgba(143, 126, 53, 0.1);
