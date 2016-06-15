@@ -4047,9 +4047,6 @@ div.column table.peopleList tbody td p {
   line-height: 1.35em;
   padding-bottom: 0;
 }
-div.column table.peopleList tbody td p:not(:last-child):not(.no-btm-spacing) {
-  margin-bottom: 1em;
-}
 div.column table.peopleList tbody td p.staff-portrait {
   float: left;
   height: 120px;
@@ -4085,6 +4082,9 @@ div.column table.peopleList tbody td p.staff-bio {
   padding-top: 0.625em;
   padding-bottom: 0;
   font-size: 0.875em;
+}
+div.column table.peopleList tbody td p.staff-bio:not(:last-child):not(.no-btm-spacing) {
+  margin-bottom: 1em;
 }
 div.column table.peopleList tbody td p.staff-bio.more {
   clear: both;
