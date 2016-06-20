@@ -278,13 +278,13 @@ section {
 }
 
 .insert-colored-hyperlink(@indicator-clr, @text-clr, @hover-clr, @text-clr-on-hover, @text-shadow-clr)
- when (iscolor((@indicator-clr)) and (iscolor(@text-clr)) and (iscolor(@hover-clr))
+ when (iscolor(@indicator-clr)) and (iscolor(@text-clr)) and (iscolor(@hover-clr))
  and (iscolor(@text-clr-on-hover)) and (iscolor(@text-shadow-clr)) {
 	a {
 		border-bottom: 1px solid rgba(red(@indicator-clr), green(@indicator-clr),
 						blue(@indicator-clr), .15);
-		box-shadow: inset 0 -5px 0 rgba(red(@hex-accent-green), green(@hex-accent-green),
-					 blue(@hex-accent-green), .15);
+		box-shadow: inset 0 -5px 0 rgba(red(@indicator-clr), green(@indicator-clr),
+					 blue(@indicator-clr), .15);
 		color: @text-clr;
 		&:hover {
 			border-color: transparent;
@@ -324,7 +324,7 @@ div.interactively-flipped-panels {
                     background-size: 100% auto;
                     color: @hex-white;
 					.insert-colored-hyperlink(@hex-accent-green, @hex-accent-green, @hex-accent-green, 
-					 @hex-lightest-green, @hex-darkest-green);
+					 @hex-lighter-green, @hex-darkest-green);
                 }
             }
         }
@@ -339,7 +339,7 @@ div.interactively-flipped-panels {
                     background-size: 100% auto;
                     color: @hex-white;
 					.insert-colored-hyperlink(@hex-accent-orange, @hex-accent-orange, @hex-accent-orange, 
-					 @hex-lightest-orange, @hex-darkest-orange);
+					 @hex-lighter-orange, @hex-darkest-orange);
                 }
             }
         }
@@ -354,7 +354,7 @@ div.interactively-flipped-panels {
                     background-size: 100% auto;
                     color: @hex-white;
 					.insert-colored-hyperlink(@hex-accent-yellow, @hex-accent-yellow, @hex-accent-yellow, 
-					 @hex-lightest-yellow, @hex-darkest-yellow);
+					 @hex-lighter-yellow, @hex-darkest-yellow);
                 }
             }
         }
@@ -369,7 +369,7 @@ div.interactively-flipped-panels {
                     background-size: 100% auto;
                     color: @hex-white;
 					.insert-colored-hyperlink(@hex-accent-blue, @hex-accent-blue, @hex-accent-blue, 
-					 @hex-lightest-blue, @hex-darkest-blue);
+					 @hex-lighter-blue, @hex-darkest-blue);
                 }
             }
         }    
