@@ -4229,8 +4229,10 @@ div.interactively-flipped-panels > div.container > div.panel-wrapper.top-left di
   color: #ada400;
 }
 div.interactively-flipped-panels > div.container > div.panel-wrapper.top-left div.panel div.rear a:hover {
+  border-color: transparent;
+  box-shadow: inset 0 -5px 0 transparent;
   background-color: rgba(173, 164, 0, 0.3);
-  color: #e3dfcd;
+  color: #cbc4a2;
   text-shadow: 1px 1px 1px rgba(57, 50, 21, 0.3);
 }
 div.interactively-flipped-panels > div.container > div.panel-wrapper.top-right div.panel div.front {
@@ -4242,6 +4244,18 @@ div.interactively-flipped-panels > div.container > div.panel-wrapper.top-right d
   background-size: 100% auto;
   color: #fff;
 }
+div.interactively-flipped-panels > div.container > div.panel-wrapper.top-right div.panel div.rear a {
+  border-bottom: 1px solid rgba(246, 134, 31, 0.15);
+  box-shadow: inset 0 -5px 0 rgba(173, 164, 0, 0.15);
+  color: #f6861f;
+}
+div.interactively-flipped-panels > div.container > div.panel-wrapper.top-right div.panel div.rear a:hover {
+  border-color: transparent;
+  box-shadow: inset 0 -5px 0 transparent;
+  background-color: rgba(246, 134, 31, 0.3);
+  color: #ddbea1;
+  text-shadow: 1px 1px 1px rgba(73, 46, 20, 0.3);
+}
 div.interactively-flipped-panels > div.container > div.panel-wrapper.bottom-left div.panel div.front {
   background: #ffb81c url(/wp-content/uploads/sites/906/2016/04/Graphic_Maintaining-Wellbeing-Front.jpg) no-repeat center center;
   background-size: 100% auto;
@@ -4251,6 +4265,18 @@ div.interactively-flipped-panels > div.container > div.panel-wrapper.bottom-left
   background-size: 100% auto;
   color: #fff;
 }
+div.interactively-flipped-panels > div.container > div.panel-wrapper.bottom-left div.panel div.rear a {
+  border-bottom: 1px solid rgba(255, 184, 28, 0.15);
+  box-shadow: inset 0 -5px 0 rgba(173, 164, 0, 0.15);
+  color: #ffb81c;
+}
+div.interactively-flipped-panels > div.container > div.panel-wrapper.bottom-left div.panel div.rear a:hover {
+  border-color: transparent;
+  box-shadow: inset 0 -5px 0 transparent;
+  background-color: rgba(255, 184, 28, 0.3);
+  color: #e5cd93;
+  text-shadow: 1px 1px 1px rgba(79, 58, 8, 0.3);
+}
 div.interactively-flipped-panels > div.container > div.panel-wrapper.bottom-right div.panel div.front {
   background: #00a5bd url(/wp-content/uploads/sites/906/2016/04/Graphic_Finding-Direction-Front.jpg) no-repeat center center;
   background-size: 100% auto;
@@ -4259,6 +4285,18 @@ div.interactively-flipped-panels > div.container > div.panel-wrapper.bottom-righ
   background: #2f5055 url(/wp-content/uploads/sites/906/2016/04/Graphic_Finding-Direction-Rear.jpg) no-repeat center center;
   background-size: 100% auto;
   color: #fff;
+}
+div.interactively-flipped-panels > div.container > div.panel-wrapper.bottom-right div.panel div.rear a {
+  border-bottom: 1px solid rgba(0, 165, 189, 0.15);
+  box-shadow: inset 0 -5px 0 rgba(173, 164, 0, 0.15);
+  color: #00a5bd;
+}
+div.interactively-flipped-panels > div.container > div.panel-wrapper.bottom-right div.panel div.rear a:hover {
+  border-color: transparent;
+  box-shadow: inset 0 -5px 0 transparent;
+  background-color: rgba(0, 165, 189, 0.3);
+  color: #aec7cb;
+  text-shadow: 1px 1px 1px rgba(32, 54, 57, 0.3);
 }
 .triggered-on-hover .content-hidden {
   font-family: 'Roboto Mono', monospace, sans-serif;
