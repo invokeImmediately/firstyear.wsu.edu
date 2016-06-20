@@ -145,15 +145,19 @@ div.column {
                     font-size: 1.3em;
                 }
                 &.staff-bio {
+                    &:not(:last-child):not(.no-btm-spacing) {
+                        margin-bottom: @v-btm-mrgns;
+                    }
                     clear: both;
                     padding-top: 0.625em;
                      padding-bottom: 0;
                     font-size: 0.875em;
                     &.more {
                         clear: both;
-                        font-size: 2em;
+                        font-size: 0.75em;
                         line-height: 0.25em;
                         text-align: center;
+                        text-transform: uppercase;
                     }
                 }
             }
@@ -273,8 +277,29 @@ section {
     }
 }
 
+.insert-colored-hyperlink(@indicator-clr, @text-clr, @hover-clr, @text-clr-on-hover, @text-shadow-clr)
+ when (iscolor((@indicator-clr)) and (iscolor(@text-clr)) and (iscolor(@hover-clr))
+ and (iscolor(@text-clr-on-hover)) and (iscolor(@text-shadow-clr)) {
+	a {
+		border-bottom: 1px solid rgba(red(@indicator-clr), green(@indicator-clr),
+						blue(@indicator-clr), .15);
+		box-shadow: inset 0 -5px 0 rgba(red(@hex-accent-green), green(@hex-accent-green),
+					 blue(@hex-accent-green), .15);
+		color: @text-clr;
+		&:hover {
+			border-color: transparent;
+			box-shadow: inset 0 -5px 0 transparent;
+			background-color: rgba(red(@hover-clr), green(@hover-clr),
+			                   blue(@hover-clr), 0.3);
+			color: @text-clr-on-hover;
+			text-shadow: 1px 1px 1px rgba(red(@text-shadow-clr), green(@text-shadow-clr),
+						  blue(@text-shadow-clr), .3);
+		}
+	}
+}
+
 div.interactively-flipped-panels {
-    background: @hex-dark-gray url(/wp-content/uploads/sites/906/2016/04/texture_brushed-metal.jpg) repeat scroll left top ;
+    background: @hex-dark-gray url(/wp-content/uploads/sites/906/2016/04/texture_brushed-metal.jpg) repeat scroll left top;
     & > div.container > div.panel-wrapper {
         & > div.panel > div.rear {
             & > p.success-key, & > p.alternate-title {
@@ -298,6 +323,8 @@ div.interactively-flipped-panels {
                     background: @hex-darker-green url(/wp-content/uploads/sites/906/2016/04/Graphic_Embracing-Academic-Life-Back.jpg) no-repeat center center;
                     background-size: 100% auto;
                     color: @hex-white;
+					.insert-colored-hyperlink(@hex-accent-green, @hex-accent-green, @hex-accent-green, 
+					 @hex-lightest-green, @hex-darkest-green);
                 }
             }
         }
@@ -311,6 +338,8 @@ div.interactively-flipped-panels {
                     background: @hex-darker-orange url(/wp-content/uploads/sites/906/2016/04/Graphic_Building-Community-Rear.jpg) no-repeat center center;
                     background-size: 100% auto;
                     color: @hex-white;
+					.insert-colored-hyperlink(@hex-accent-orange, @hex-accent-orange, @hex-accent-orange, 
+					 @hex-lightest-orange, @hex-darkest-orange);
                 }
             }
         }
@@ -324,6 +353,8 @@ div.interactively-flipped-panels {
                     background: @hex-darker-yellow url(/wp-content/uploads/sites/906/2016/04/Graphic_Maintaining-Wellbeing-Rear.jpg) no-repeat center center;
                     background-size: 100% auto;
                     color: @hex-white;
+					.insert-colored-hyperlink(@hex-accent-yellow, @hex-accent-yellow, @hex-accent-yellow, 
+					 @hex-lightest-yellow, @hex-darkest-yellow);
                 }
             }
         }
@@ -337,8 +368,20 @@ div.interactively-flipped-panels {
                     background: @hex-darker-blue url(/wp-content/uploads/sites/906/2016/04/Graphic_Finding-Direction-Rear.jpg) no-repeat center center;
                     background-size: 100% auto;
                     color: @hex-white;
+					.insert-colored-hyperlink(@hex-accent-blue, @hex-accent-blue, @hex-accent-blue, 
+					 @hex-lightest-blue, @hex-darkest-blue);
                 }
             }
         }    
+    }
+}
+
+.triggered-on-hover {
+    .content-hidden {
+        .has-mono-font;
+        font-size: 0.875em;
+    }
+    .content-revealed {
+        display: none;
     }
 }
