@@ -4230,7 +4230,7 @@ div.interactively-flipped-panels > div.container > div.panel-wrapper.top-left di
 }
 div.interactively-flipped-panels > div.container > div.panel-wrapper.top-left div.panel div.rear a:hover {
   background-color: rgba(173, 164, 0, 0.3);
-  color: #f4f2eb;
+  color: #e3dfcd;
   text-shadow: 1px 1px 1px rgba(57, 50, 21, 0.3);
 }
 div.interactively-flipped-panels > div.container > div.panel-wrapper.top-right div.panel div.front {
