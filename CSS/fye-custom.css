@@ -4246,7 +4246,7 @@ div.interactively-flipped-panels > div.container > div.panel-wrapper.top-right d
 }
 div.interactively-flipped-panels > div.container > div.panel-wrapper.top-right div.panel div.rear a {
   border-bottom: 1px solid rgba(246, 134, 31, 0.15);
-  box-shadow: inset 0 -5px 0 rgba(173, 164, 0, 0.15);
+  box-shadow: inset 0 -5px 0 rgba(246, 134, 31, 0.15);
   color: #f6861f;
 }
 div.interactively-flipped-panels > div.container > div.panel-wrapper.top-right div.panel div.rear a:hover {
@@ -4267,7 +4267,7 @@ div.interactively-flipped-panels > div.container > div.panel-wrapper.bottom-left
 }
 div.interactively-flipped-panels > div.container > div.panel-wrapper.bottom-left div.panel div.rear a {
   border-bottom: 1px solid rgba(255, 184, 28, 0.15);
-  box-shadow: inset 0 -5px 0 rgba(173, 164, 0, 0.15);
+  box-shadow: inset 0 -5px 0 rgba(255, 184, 28, 0.15);
   color: #ffb81c;
 }
 div.interactively-flipped-panels > div.container > div.panel-wrapper.bottom-left div.panel div.rear a:hover {
@@ -4288,7 +4288,7 @@ div.interactively-flipped-panels > div.container > div.panel-wrapper.bottom-righ
 }
 div.interactively-flipped-panels > div.container > div.panel-wrapper.bottom-right div.panel div.rear a {
   border-bottom: 1px solid rgba(0, 165, 189, 0.15);
-  box-shadow: inset 0 -5px 0 rgba(173, 164, 0, 0.15);
+  box-shadow: inset 0 -5px 0 rgba(0, 165, 189, 0.15);
   color: #00a5bd;
 }
 div.interactively-flipped-panels > div.container > div.panel-wrapper.bottom-right div.panel div.rear a:hover {
