@@ -1,7 +1,25 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto+Mono:300);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Mono:300|Roboto+Condensed:400,700);
 .has-mono-font {
-  font-family: 'Roboto Mono', 'Open Sans', 'Lucida Sans Unicode', 'Lucida Sans', 'Lucida Grande';
+  font-family: 'Roboto Mono', monospace, sans-serif;
   font-weight: 300;
+}
+.has-dflt-font,
+body,
+div.column h1,
+div.column h2,
+div.column h3,
+div.column h4,
+div.column,
+.gform_heading h3.gform_title {
+  font-family: 'Open Sans', sans-serif;
+}
+.has-alt-font,
+div.column p.article-tagline.sans,
+span.accentuated-text {
+  font-family: 'Open Sans Condensed', 'Open Sans', sans-serif;
+}
+.has-subst-font {
+  font-family: 'Roboto Condensed', 'Open Sans', sans-serif;
 }
 .initially-hidden {
   display: none;
@@ -114,21 +132,6 @@ img shift-to-center {
 .centered,
 .centers-text {
   text-align: center;
-}
-.has-dflt-font,
-body,
-div.column h1,
-div.column h2,
-div.column h3,
-div.column h4,
-div.column,
-.gform_heading h3.gform_title {
-  font-family: 'Open Sans', 'Lucida Sans Unicode', 'Lucida Sans', 'Lucida Grande';
-}
-.has-alt-font,
-div.column p.article-tagline.sans,
-span.accentuated-text {
-  font-family: 'Open Sans Condensed', 'Geneva', 'Verdana', 'Open Sans', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', sans-serif;
 }
 .soft-gray-border {
   border: 1px solid rgba(42, 48, 51, 0.5);
@@ -428,7 +431,7 @@ section.article-header div.header-content {
     text-shadow: 0 0.3333px 0 #77898b, 0 0.6667px 0 #687779, 0 1px 0 #576365, 0 1.3333px 0 #475153, 0 1.6667px 0 #363e3f, 0 2px 0.3333px rgba(0, 0, 0, 0.1), 0 0 1.6667px rgba(0, 0, 0, 0.1), 0 0.3333px 1px rgba(0, 0, 0, 0.3), 0 1px 1.6667px rgba(0, 0, 0, 0.2), 0 1.6667px 3.3333px rgba(0, 0, 0, 0.25), 0 3.3333px 3.3333px rgba(0, 0, 0, 0.2), 0 6.6667px 6.6667px rgba(0, 0, 0, 0.15);
   }
 }
-section.halves div.column p {
+section.halves div.column p:not([class*="center"]) {
   text-align: left;
 }
 @media (min-width: 1050px) {
@@ -1885,27 +1888,28 @@ div.interactively-flipped-panels div.container div.panel-wrapper:hover {
 }
 div.interactively-flipped-panels div.container div.panel-wrapper:hover div.panel div.front {
   opacity: 0;
+  z-index: 0;
 }
 @media all and (min-width: 481px) {
   div.interactively-flipped-panels div.container div.panel-wrapper:hover div.panel div.front {
-    transition-property: opacity;
-    -webkit-transition-property: opacity;
-    transition-delay: 0.5s;
-    -webkit-transition-delay: 0.5s;
-    transition-duration: 0.25s;
-    -webkit-transition-duration: 0.25s;
-    transition-timing-function: linear;
-    -webkit-transition-timing-function: linear;
+    transition-property: opacity, z-index;
+    -webkit-transition-property: opacity, z-index;
+    transition-delay: 0.5s, 0.5s;
+    -webkit-transition-delay: 0.5s, 0.5s;
+    transition-duration: 0.25s, 0.25s;
+    -webkit-transition-duration: 0.25s, 0.25s;
+    transition-timing-function: linear, step-end;
+    -webkit-transition-timing-function: linear, step-end;
   }
 }
 @media all and (max-width: 480px) {
   div.interactively-flipped-panels div.container div.panel-wrapper:hover div.panel div.front {
-    transition-property: opacity;
-    -webkit-transition-property: opacity;
-    transition-duration: 0.25s;
-    -webkit-transition-duration: 0.25s;
-    transition-timing-function: linear;
-    -webkit-transition-timing-function: linear;
+    transition-property: opacity, z-index;
+    -webkit-transition-property: opacity, z-index;
+    transition-duration: 0.25s, 0.25s;
+    -webkit-transition-duration: 0.25s, 0.25s;
+    transition-timing-function: linear, step-end;
+    -webkit-transition-timing-function: linear, step-end;
   }
 }
 div.interactively-flipped-panels div.container div.panel-wrapper:hover div.panel div.rear {
@@ -2497,6 +2501,10 @@ strong.opening-line {
   font-size: 1.0625em;
   color: #72652a;
   text-shadow: 1px 1px 1px rgba(57, 50, 21, 0.3333);
+}
+strong.stands-out {
+  font-family: 'Roboto Condensed', 'Open Sans', sans-serif;
+  font-size: 1.2em;
 }
 mark.highlight {
   background-color: transparent;
@@ -4215,6 +4223,15 @@ div.interactively-flipped-panels > div.container > div.panel-wrapper.top-left di
   background-size: 100% auto;
   color: #fff;
 }
+div.interactively-flipped-panels > div.container > div.panel-wrapper.top-left div.panel div.rear a {
+  border-bottom: 1px solid rgba(175, 163, 112, 0.15);
+  box-shadow: inset 0 -5px 0 rgba(173, 164, 0, 0.15);
+}
+div.interactively-flipped-panels > div.container > div.panel-wrapper.top-left div.panel div.rear a:hover {
+  background-color: rgba(173, 164, 0, 0.3);
+  color: #afa370;
+  text-shadow: 1px 1px 1px rgba(57, 50, 21, 0.3);
+}
 div.interactively-flipped-panels > div.container > div.panel-wrapper.top-right div.panel div.front {
   background: #f6861f url(/wp-content/uploads/sites/906/2016/04/Graphic_Building-Community-Front.jpg) no-repeat center center;
   background-size: 100% auto;
@@ -4243,7 +4260,7 @@ div.interactively-flipped-panels > div.container > div.panel-wrapper.bottom-righ
   color: #fff;
 }
 .triggered-on-hover .content-hidden {
-  font-family: 'Roboto Mono', 'Open Sans', 'Lucida Sans Unicode', 'Lucida Sans', 'Lucida Grande';
+  font-family: 'Roboto Mono', monospace, sans-serif;
   font-weight: 300;
   font-size: 0.875em;
 }
