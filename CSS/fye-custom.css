@@ -4224,14 +4224,14 @@ div.interactively-flipped-panels > div.container > div.panel-wrapper.top-left di
   color: #fff;
 }
 div.interactively-flipped-panels > div.container > div.panel-wrapper.top-left div.panel div.rear a {
-  border-bottom: 1px solid rgba(173, 164, 0, 0.15);
-  box-shadow: inset 0 -5px 0 rgba(173, 164, 0, 0.15);
+  border-bottom: 1px solid rgba(173, 164, 0, 0.25);
+  box-shadow: inset 0 -5px 0 rgba(173, 164, 0, 0.25);
   color: #ada400;
 }
 div.interactively-flipped-panels > div.container > div.panel-wrapper.top-left div.panel div.rear a:hover {
   border-color: transparent;
   box-shadow: inset 0 -5px 0 transparent;
-  background-color: rgba(173, 164, 0, 0.3);
+  background-color: rgba(173, 164, 0, 0.5);
   color: #cbc4a2;
   text-shadow: 1px 1px 1px rgba(57, 50, 21, 0.3);
 }
@@ -4245,14 +4245,14 @@ div.interactively-flipped-panels > div.container > div.panel-wrapper.top-right d
   color: #fff;
 }
 div.interactively-flipped-panels > div.container > div.panel-wrapper.top-right div.panel div.rear a {
-  border-bottom: 1px solid rgba(246, 134, 31, 0.15);
-  box-shadow: inset 0 -5px 0 rgba(246, 134, 31, 0.15);
+  border-bottom: 1px solid rgba(246, 134, 31, 0.25);
+  box-shadow: inset 0 -5px 0 rgba(246, 134, 31, 0.25);
   color: #f6861f;
 }
 div.interactively-flipped-panels > div.container > div.panel-wrapper.top-right div.panel div.rear a:hover {
   border-color: transparent;
   box-shadow: inset 0 -5px 0 transparent;
-  background-color: rgba(246, 134, 31, 0.3);
+  background-color: rgba(246, 134, 31, 0.5);
   color: #ddbea1;
   text-shadow: 1px 1px 1px rgba(73, 46, 20, 0.3);
 }
@@ -4266,14 +4266,14 @@ div.interactively-flipped-panels > div.container > div.panel-wrapper.bottom-left
   color: #fff;
 }
 div.interactively-flipped-panels > div.container > div.panel-wrapper.bottom-left div.panel div.rear a {
-  border-bottom: 1px solid rgba(255, 184, 28, 0.15);
-  box-shadow: inset 0 -5px 0 rgba(255, 184, 28, 0.15);
+  border-bottom: 1px solid rgba(255, 184, 28, 0.25);
+  box-shadow: inset 0 -5px 0 rgba(255, 184, 28, 0.25);
   color: #ffb81c;
 }
 div.interactively-flipped-panels > div.container > div.panel-wrapper.bottom-left div.panel div.rear a:hover {
   border-color: transparent;
   box-shadow: inset 0 -5px 0 transparent;
-  background-color: rgba(255, 184, 28, 0.3);
+  background-color: rgba(255, 184, 28, 0.5);
   color: #e5cd93;
   text-shadow: 1px 1px 1px rgba(79, 58, 8, 0.3);
 }
@@ -4287,14 +4287,14 @@ div.interactively-flipped-panels > div.container > div.panel-wrapper.bottom-righ
   color: #fff;
 }
 div.interactively-flipped-panels > div.container > div.panel-wrapper.bottom-right div.panel div.rear a {
-  border-bottom: 1px solid rgba(0, 165, 189, 0.15);
-  box-shadow: inset 0 -5px 0 rgba(0, 165, 189, 0.15);
+  border-bottom: 1px solid rgba(0, 165, 189, 0.25);
+  box-shadow: inset 0 -5px 0 rgba(0, 165, 189, 0.25);
   color: #00a5bd;
 }
 div.interactively-flipped-panels > div.container > div.panel-wrapper.bottom-right div.panel div.rear a:hover {
   border-color: transparent;
   box-shadow: inset 0 -5px 0 transparent;
-  background-color: rgba(0, 165, 189, 0.3);
+  background-color: rgba(0, 165, 189, 0.5);
   color: #aec7cb;
   text-shadow: 1px 1px 1px rgba(32, 54, 57, 0.3);
 }
