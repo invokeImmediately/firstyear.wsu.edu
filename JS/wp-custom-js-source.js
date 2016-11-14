@@ -120,7 +120,7 @@ function isJQuery($obj) {
 		// initScrollingSidebars("...");
         initWelcomeMessage(
 			"#welcome-message",
-			"post-welcome-message",
+			"#post-welcome-message",
 			1000,
 			500,
 			500
