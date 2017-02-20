@@ -202,13 +202,6 @@
 			slctrCntntHddn: ".content-hidden",
 			animDuration: 200
 		};
-		params.initWelcomeMessage = {
-			slctrWlcmMsg: "#welcome-message",
-			slctrPostWlcmMsg: "#post-welcome-message",
-			msgDelay: 1000,
-			fadeOutDuration: 500,
-			fadeInDuration: 500
-		};
 		
 		// Call document initialization functions
 		theseParams = params.fixDogears;
@@ -334,14 +327,6 @@
 		
 		// TODO: initScrollingSidebars("...");
         
-		theseParams = params.initWelcomeMessage;
-		initWelcomeMessage(
-			theseParams.slctrWlcmMsg,
-			theseParams.slctrPostWlcmMsg,
-			theseParams.msgDelay,
-			theseParams.fadeOutDuration,
-			theseParams.fadeInDuration
-		);
     });
     
 	/****************************************************************************************************
@@ -365,6 +350,13 @@
 			collapseAllClass: "collapse-all-button",
 			animFadeInDrtn: 400
 		};
+		params.initWelcomeMessage = {
+			slctrWlcmMsg: "#welcome-message",
+			slctrPostWlcmMsg: "#post-welcome-message",
+			msgDelay: 1000,
+			fadeOutDuration: 500,
+			fadeInDuration: 500
+		};
 		
 		// Call loaded window functions
 		theseParams = params.finalizeLrgFrmtSideRight;
@@ -382,6 +374,15 @@
 			theseParams.expandAllClass,
 			theseParams.collapseAllClass,
 			theseParams.animFadeInDrtn
+		);
+		
+		theseParams = params.initWelcomeMessage;
+		initWelcomeMessage(
+			theseParams.slctrWlcmMsg,
+			theseParams.slctrPostWlcmMsg,
+			theseParams.msgDelay,
+			theseParams.fadeOutDuration,
+			theseParams.fadeInDuration
 		);
     });
     
