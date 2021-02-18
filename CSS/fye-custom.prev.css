@@ -1,4 +1,4 @@
-﻿@import  'https://fonts.googleapis.com/css?family=Roboto+Mono:300|Roboto+Condensed:400,700|Roboto+Slab|PT+Serif';
+﻿@import  "https://fonts.googleapis.com/css?family=Roboto+Mono:300|Roboto+Condensed:400,700|Roboto+Slab|PT+Serif";
 
 /*! Built with the LESS CSS preprocessor [http://lesscss.org/]. Please see [https://github.com/invokeImmediately/firstyear.wsu.edu] for a repository of source code. */
 /*! ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
@@ -4433,7 +4433,7 @@ ul.cascaded-layout.blank>li.gutter-sizer {
 	line-height: 1.375em;
 }
 
-.article-summary aside.article-sidebar,.article-summary img,.article-summary object,.article-summary p.article-media-contacts,.article-summary p.photo-caption,.article-summary>h3 {
+.article-summary aside.article-sidebar,.article-summary img,.article-summary object,.article-summary .article-media-contacts,.article-summary .photo-caption,.article-summary>h3 {
 	display: none;
 }
 
@@ -4452,15 +4452,6 @@ body.single-post .main-header+.featured-image {
 .column .wsuwp-content-syndicate-list {
 	list-style-type: none;
 	padding: 0;
-}
-
-.page.home .column .wsuwp-content-syndicate-item {
-	float: left;
-	box-sizing: border-box;
-	width: 50%;
-	padding: 0 2rem 2rem 0;
-	line-height: 1.375em;
-	list-style-image: none !important;
 }
 
 .page.home .column .wsuwp-content-syndicate-item .content-item-title {
@@ -8442,4 +8433,113 @@ div.interactively-flipped-panels>div.container>div.panel-wrapper.bottom-right di
 
 .triggered-on-hover .content-revealed {
 	display: none;
+}
+
+/* New print styles added 2019-05-23. */
+@media print {
+	#fund-announcement {
+		display: none;
+	}
+	
+	body.blog .row.side-right .column.one {
+		width: 100% !important;
+	}
+	
+	body.blog .row.side-right .column.two {
+		width: 100% !important;
+	}
+	
+	body.blog .row.side-right p {
+		max-width: none;
+	}
+	
+	body.blog .row.side-right .article-thumbnail {
+		margin-left: 1em;
+	}
+	
+	body.home #wsuwp-main {
+		width: calc(100% - 198px) !important;
+		margin-left: 198px;
+	}
+	
+	body.home #spine {
+		display: block !important;
+	}
+	
+	body.home #spine nav ul ul li {
+		display: block !important;
+	}
+}
+
+.column .header-newsEvents {
+	background: url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat left top, url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat right top, url(/wp-content/uploads/sites/50/2015/06/wpbg-news-events-v2.png) no-repeat center;
+}
+
+.style--card {
+	background-color: #fff;
+	box-shadow: 0 0 0 1px rgba(255,255,255,.9), 0 0 0 2px rgba(0,0,0,.2), 0 3px 2px 0 rgba(0,0,0,.22);
+	border-radius: 4px;
+	box-sizing: border-box;
+	padding: 1rem;
+}
+
+.style--card--raised {
+	background-color: #fff;
+	border: 1px solid #464e54;
+	box-shadow: 0 4px 8px 1px rgba(0,0,0,.22);
+	border-radius: 4px;
+	box-sizing: border-box;
+	padding: 1rem;
+}
+
+.style--card__title {
+	background-color: #d7dadb;
+	color: #2a3033;
+	margin-left: -1rem;
+	margin-right: -1rem;
+	padding: .5rem 1rem;
+}
+
+.style--card__title:first-child {
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	margin-left: -1rem !important;
+	margin-top: -1rem !important;
+	padding: .25rem 1rem;
+}
+
+.style--card__sub-title {
+	background-color: #5e6a71;
+	color: #fff;
+	font-size: 1.1em;
+	font-weight: 700;
+	font-family: 'Open Sans Condensed', 'Lucida Sans', sans-serif;
+	margin-bottom: 0;
+	margin-top: 0;
+	margin-left: -1rem;
+	margin-right: -1rem;
+	letter-spacing: 1px;
+	padding: .5rem 1rem;
+	word-spacing: 1px;
+}
+
+.style-card__title+.style--card__sub-title {
+	margin-top: 0;
+}
+
+.wsuwp-content-syndicate-list {
+	list-style: disc inside none !important;
+}
+
+#builder-section-1587003366140 {
+	display: flex;
+	align-items: center;
+}
+
+.column section.article-header {
+	max-width: 926px;
+}
+
+header.main-header {
+	background-size: cover;
 }
